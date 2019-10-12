@@ -1,7 +1,7 @@
 import React from "react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/styles';
 import reducer from "./reducers";
 import theme from './utils/theme';
