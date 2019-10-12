@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/react-reports-demo/static/js/main.994c3f3b.chunk.js",
-    "main.js.map": "/react-reports-demo/static/js/main.994c3f3b.chunk.js.map",
-    "runtime-main.js": "/react-reports-demo/static/js/runtime-main.732a3a26.js",
-    "runtime-main.js.map": "/react-reports-demo/static/js/runtime-main.732a3a26.js.map",
-    "static/js/2.f30ec736.chunk.js": "/react-reports-demo/static/js/2.f30ec736.chunk.js",
-    "static/js/2.f30ec736.chunk.js.map": "/react-reports-demo/static/js/2.f30ec736.chunk.js.map",
-    "index.html": "/react-reports-demo/index.html",
-    "precache-manifest.511204fe8c68eeb2161a4a974b8ae7d8.js": "/react-reports-demo/precache-manifest.511204fe8c68eeb2161a4a974b8ae7d8.js",
-    "service-worker.js": "/react-reports-demo/service-worker.js",
-    "static/media/hydrus_logo.svg": "/react-reports-demo/static/media/hydrus_logo.714e18bf.svg"
+    "main.js": "/static/js/main.994c3f3b.chunk.js",
+    "main.js.map": "/static/js/main.994c3f3b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.acf0d95f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.acf0d95f.js.map",
+    "static/js/2.f30ec736.chunk.js": "/static/js/2.f30ec736.chunk.js",
+    "static/js/2.f30ec736.chunk.js.map": "/static/js/2.f30ec736.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d2f20ed4dfbb4f910d7597b171659c10.js": "/precache-manifest.d2f20ed4dfbb4f910d7597b171659c10.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/hydrus_logo.svg": "/static/media/hydrus_logo.714e18bf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.732a3a26.js",
+    "static/js/runtime-main.acf0d95f.js",
     "static/js/2.f30ec736.chunk.js",
     "static/js/main.994c3f3b.chunk.js"
   ]
