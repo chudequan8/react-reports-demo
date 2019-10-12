@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function App() {
+export default function Home() {
   return (
     <div>
-      23123312312
+      首页
     </div>
   )
 }
