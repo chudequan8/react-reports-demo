@@ -1,20 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/styles";
 
-import { Sidebar, Topbar } from './components';
+import { Sidebar, Topbar } from "./components";
+import CustomizedSnackbars from "@/components/Toast";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    paddingTop: 56,
-    height: '100%'
+    paddingTop: 64,
+    height: "100%"
   },
   shiftContent: {
-    paddingLeft: 240
+    paddingLeft: 200
   },
   content: {
-    height: '100%'
+    height: "100%",
+    padding: theme.spacing(2)
   }
 }));
 
@@ -30,13 +32,9 @@ const Main = props => {
       })}
     >
       <Topbar />
-      <Sidebar
-        open={true}
-        variant={'persistent'}
-      />
-      <main className={classes.content}>
-        {children}
-      </main>
+      <Sidebar open={true} variant={"persistent"} />
+      <main className={classes.content}>{children}</main>
+      <CustomizedSnackbars />
     </div>
   );
 };

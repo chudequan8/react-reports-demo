@@ -14,8 +14,8 @@ import {
   columnBands,
   totalSummaryItems
 } from "./columnData";
-import {Cell, HeaderCell, BandCell} from './cellComponents';
-import { formatNumber } from "../../utils";
+import { Cell, HeaderCell, BandCell } from "./cellComponents";
+import { formatNumber } from "@/utils";
 
 function renderUAText(rows) {
   return (
@@ -75,7 +75,7 @@ const mapStateToProps = state => {
     ...state,
     rows: reportsByMenu[activedMenu].rows.map((row, index) => ({
       ...row,
-      index
+      index: index + 1
     }))
   };
 };

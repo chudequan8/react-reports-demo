@@ -28,3 +28,13 @@ export function deepClone (source) {
   }
   return targetObj
 }
+
+/**
+ * 随机获得一个范围内的整数
+ * @param start
+ * @param end
+ * @returns {*}
+ */
+export function randInt(start, end) {
+  return Math.floor(Math.random() * (end - start)) + start
+}

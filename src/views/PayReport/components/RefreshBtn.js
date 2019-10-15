@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { purple } from "@material-ui/core/colors";
 import { withStyles } from "@material-ui/core/styles";
-import { fetchReportsIfNeeded } from "../actions";
 
 const ColorButton = withStyles(() => ({
   root: {
@@ -15,7 +14,6 @@ const ColorButton = withStyles(() => ({
 }))(Button);
 
 const RefreshBtn = function(props) {
-  const { isFetching, activedMenu, dispatch } = props
   return (
     <Grid
       container
@@ -30,8 +28,8 @@ const RefreshBtn = function(props) {
         variant="contained"
         color="primary"
         size="large"
-        onClick={() => {!isFetching && dispatch(fetchReportsIfNeeded(activedMenu, 'heihei'))}}
-      >
+        // onClick={() => {!isFetching && dispatch(fetchReportsIfNeeded())}}
+        >
         同步数据
       </ColorButton>
     </Grid>

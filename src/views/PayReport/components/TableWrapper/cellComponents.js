@@ -6,8 +6,8 @@ import {
   TableHeaderRow,
   TableBandHeader
 } from "@devexpress/dx-react-grid-material-ui";
-import { formatNumber } from "../../utils";
-import { editReports, setActiveCell } from "../../actions";
+import { formatNumber } from "@/utils";
+import { editReports, setActiveCell, setMsg } from "@/actions";
 import TextField from "@material-ui/core/TextField";
 import blue from "@material-ui/core/colors/blue";
 import green from "@material-ui/core/colors/green";
@@ -15,7 +15,8 @@ import green from "@material-ui/core/colors/green";
 export const HeaderCell = withStyles(
   () => ({
     cellStyle: {
-      borderLeft: "1px solid rgba(224, 224, 224, 1)"
+      borderLeft: "1px solid rgba(224, 224, 224, 1)",
+      fontSize: "12px"
     }
   }),
   { name: "HeaderCell" }
@@ -36,7 +37,8 @@ export const BandCell = withStyles(
     titleStyle: {
       textAlign: "center",
       borderRight: 0,
-      borderLeft: "1px solid rgba(224, 224, 224, 1)"
+      borderLeft: "1px solid rgba(224, 224, 224, 1)",
+      fontSize: "12px"
     }
   }),
   { name: "BandCell" }
@@ -57,7 +59,6 @@ const mapStateToProps = state => {
   return {
     ...state,
     activeCell
-    // rows: reportsByMenu[activedMenu].rows
   };
 };
 
@@ -91,18 +92,38 @@ const StyledCell = withStyles(
           autoFocus={true}
           onInput={e => setVal(e.target.value)}
           onBlur={() => {
+            let curVal = val;
             dispatch(setActiveCell());
-            if (String(val) === String(value)) {
+            if (String(curVal) === String(value)) {
               return false;
             }
-            const data = {
-              id: row.id,
-              [column.name]: val
+            if (curVal === "") {
+              dispatch(setMsg(1, "数据不能填写为空"));
+              curVal = value;
+              return false;
             }
+            if (isNaN(Number(curVal))) {
+              dispatch(setMsg(1, "请填写数字"));
+              curVal = value;
+              return false;
+            }
+            if (curVal < 0) {
+              dispatch(setMsg(1, "请填写正整数"));
+              curVal = value;
+              return false;
+            }
+            let data = {
+              id: row.id,
+              [column.name]: curVal
+            };
             if (column.needCalc) {
-              data.totalExpense = calcTotalExpanse(row);
+              data.totalExpense = calcTotalExpanse({
+                ...row,
+                [column.name]: curVal
+              });
             }
             dispatch(editReports(data));
+            dispatch(setMsg(1, "修改成功", 'success'));
           }}
           inputProps={{
             className: classes.inputStyle
@@ -117,6 +138,14 @@ const StyledCell = withStyles(
   return (
     <Table.Cell
       className={generateClass(column, classes)}
+      style={{
+        textAlign:
+          column.name === "index"
+            ? "center"
+            : column.name === "channelCode"
+            ? "left"
+            : "right"
+      }}
       onClick={() => {
         !column.disabled &&
           dispatch(

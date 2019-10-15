@@ -6,7 +6,7 @@ import DateFnsUtils from "@date-io/date-fns";
 import frLocale from "date-fns/locale/zh-CN";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import { setDate } from "../actions";
+import { setDate } from "@/actions";
 
 const localeMap = {
   cn: frLocale

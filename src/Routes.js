@@ -5,7 +5,7 @@ import { RouteWithLayout } from './components';
 import { Main as MainLayout } from './layouts';
 
 import {
-  Dashboard as DashboardView,
+  H5Page as H5PageView,
   PayReport as PayReportView,
 } from './views';
 
@@ -15,13 +15,13 @@ const Routes = () => {
       <Redirect
         exact
         from="/"
-        to="/dashboard"
+        to="/payReport"
       />
       <RouteWithLayout
-        component={DashboardView}
+        component={H5PageView}
         exact
         layout={MainLayout}
-        path="/dashboard"
+        path="/h5Page"
       />
       <RouteWithLayout
         component={PayReportView}

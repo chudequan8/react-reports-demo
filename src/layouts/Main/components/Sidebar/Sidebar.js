@@ -10,11 +10,9 @@ import { Profile, SidebarNav } from './components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {
-    width: 240,
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 64,
-      height: 'calc(100% - 64px)'
-    }
+    width: 200,
+    marginTop: 64,
+    height: 'calc(100% - 64px)'
   },
   root: {
     backgroundColor: theme.palette.white,
@@ -38,14 +36,14 @@ const Sidebar = props => {
 
   const pages = [
     {
-      title: '收入报表',
-      href: '/dashboard',
-      icon: <LocalAtmIcon />
-    },
-    {
       title: '支出报表',
       href: '/payReport',
       icon: <PaymentIcon />
+    },
+    {
+      title: 'H5Demo',
+      href: '/h5Page',
+      icon: <LocalAtmIcon />
     }
   ];
 

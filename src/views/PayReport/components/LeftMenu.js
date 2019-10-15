@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 
-import { setMenu } from "../actions";
+import { setMenu } from "@/actions";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -61,17 +61,3 @@ const mapStateToProps = ({ activedMenu }) => ({
 });
 
 export default connect(mapStateToProps)(LeftMenu);
-
-// const StyledMenuItem = withStyles(theme => ({
-//   root: {
-//     color: "black",
-//     "&:focus": {
-//       color: theme.palette.primary.main,
-//       backgroundColor: "transparent"
-//     },
-//     "&.MuiListItem-root.Mui-selected": {
-//       color: theme.palette.primary.main,
-//       backgroundColor: "transparent"
-//     }
-//   }
-// }))(MenuItem);
