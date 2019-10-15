@@ -13,3 +13,84 @@ a demo about my company statement by using react
   yarn start 或 npm start
 ```
 浏览器会自动打开 http://localhost:3000 访问页面。
+
+## 目录结构
+
+```
+.
+├── README.md
+├── config-overrides.js
+├── package.json
+├── public
+│   └── index.html
+├── release.js
+├── src
+│   ├── Routes.js
+│   ├── actions
+│   │   └── index.js
+│   ├── api
+│   │   └── index.js
+│   ├── assets
+│   │   ├── default-avatar.jpg
+│   │   └── hydrus_logo.svg
+│   ├── components
+│   │   ├── Loading.js
+│   │   ├── Picker.js
+│   │   ├── Posts.js
+│   │   ├── RouteWithLayout
+│   │   │   ├── RouteWithLayout.js
+│   │   │   └── index.js
+│   │   └── index.js
+│   ├── index.js
+│   ├── layouts
+│   │   ├── Main
+│   │   │   ├── Main.js
+│   │   │   ├── components
+│   │   │   │   ├── Sidebar
+│   │   │   │   │   ├── Sidebar.js
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Profile
+│   │   │   │   │   │   │   ├── Profile.js
+│   │   │   │   │   │   │   └── index.js
+│   │   │   │   │   │   ├── SidebarNav
+│   │   │   │   │   │   │   ├── SidebarNav.js
+│   │   │   │   │   │   │   └── index.js
+│   │   │   │   │   │   └── index.js
+│   │   │   │   │   └── index.js
+│   │   │   │   ├── Topbar
+│   │   │   │   │   ├── Topbar.js
+│   │   │   │   │   └── index.js
+│   │   │   │   └── index.js
+│   │   │   └── index.js
+│   │   └── index.js
+│   ├── mock
+│   │   ├── index.js
+│   │   └── modules
+│   │       ├── income.js
+│   │       ├── index.js
+│   │       └── pay.js
+│   ├── reducers
+│   │   └── index.js
+│   ├── styles
+│   │   └── index.css
+│   ├── utils
+│   │   ├── fetch.js
+│   │   ├── index.js
+│   │   └── theme.js
+│   └── views
+│       ├── H5Page
+│       │   └── index.js
+│       ├── PayReport
+│       │   ├── PayReport.js
+│       │   ├── components
+│       │   │   ├── ControlBar.js
+│       │   │   ├── LeftMenu.js
+│       │   │   ├── RefreshBtn.js
+│       │   │   └── TableWrapper
+│       │   │       ├── cellComponents.js
+│       │   │       ├── columnData.js
+│       │   │       └── index.js
+│       │   └── index.js
+│       └── index.js
+└── yarn.lock
+```
