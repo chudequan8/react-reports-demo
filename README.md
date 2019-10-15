@@ -94,3 +94,9 @@ a demo about my company statement by using react
 │       └── index.js
 └── yarn.lock
 ```
+
+## 补充
+* 所有数据由mockjs随机生成
+* 表格中实际数据都可以像excel一样点击编辑，然后自动计算出总支出。
+* h5页面的金额和期限都可以修改，系统会自动计算出利息和还款额。
+
